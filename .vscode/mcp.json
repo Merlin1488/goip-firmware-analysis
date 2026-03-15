@@ -1,0 +1,93 @@
+{
+  "inputs": [],
+  "servers": {
+    "goip-gateway": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["goip_mcp_server.js"],
+      "env": {
+        "SIP_PORT": "15060",
+        "SIP_REALM": "goip-server"
+      }
+    },
+    "goip-analysis": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["goip_analysis_mcp.js"]
+    },
+    "mcpsip-remote": {
+      "type": "sse",
+      "url": "https://mcpsip.sgoip.com/sse"
+    },
+    "azure_mcp_monitor": {
+      "disabled": false
+    },
+    "azure_mcp_applicationinsights": {
+      "disabled": false
+    },
+    "azure_mcp_applens": {
+      "disabled": false
+    },
+    "azure_mcp_resourcehealth": {
+      "disabled": false
+    },
+    "azure_mcp_kusto": {
+      "disabled": false
+    },
+    "azure_mcp_documentation": {
+      "disabled": false
+    },
+    "azure_mcp_search": {
+      "disabled": false
+    },
+    "azure_mcp_extension_azqr": {
+      "disabled": false
+    },
+    "azure_mcp_grafana": {
+      "disabled": false
+    },
+    "azure_mcp_datadog": {
+      "disabled": false
+    },
+    "azure_mcp_loadtesting": {
+      "disabled": false
+    },
+
+    "azure_mcp_acr": {},
+    "azure_mcp_aks": {},
+    "azure_mcp_appconfig": {},
+    "azure_mcp_appservice": {},
+    "azure_mcp_azd": {},
+    "azure_mcp_azureterraformbestpractices": {},
+    "azure_mcp_bicepschema": {},
+    "azure_mcp_cloudarchitect": {},
+    "azure_mcp_communication": {},
+    "azure_mcp_confidentialledger": {},
+    "azure_mcp_cosmos": {},
+    "azure_mcp_deploy": {},
+    "azure_mcp_eventgrid": {},
+    "azure_mcp_eventhubs": {},
+    "azure_mcp_extension_cli_generate": {},
+    "azure_mcp_extension_cli_install": {},
+    "azure_mcp_foundry": {},
+    "azure_mcp_functionapp": {},
+    "azure_mcp_get_bestpractices": {},
+    "azure_mcp_group_list": {},
+    "azure_mcp_keyvault": {},
+    "azure_mcp_managedlustre": {},
+    "azure_mcp_marketplace": {},
+    "azure_mcp_mysql": {},
+    "azure_mcp_postgres": {},
+    "azure_mcp_quota": {},
+    "azure_mcp_redis": {},
+    "azure_mcp_role": {},
+    "azure_mcp_servicebus": {},
+    "azure_mcp_signalr": {},
+    "azure_mcp_speech": {},
+    "azure_mcp_sql": {},
+    "azure_mcp_storage": {},
+    "azure_mcp_subscription_list": {},
+    "azure_mcp_virtualdesktop": {},
+    "azure_mcp_workbooks": {}
+  }
+}

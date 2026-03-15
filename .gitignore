@@ -1,0 +1,8 @@
+node_modules/
+fw_new/
+sqfs_test/
+*.bin
+*.img
+*.squashfs
+.cf_token
+.env

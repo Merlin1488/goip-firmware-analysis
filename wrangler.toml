@@ -1,0 +1,24 @@
+# GoIP MCP SIP Worker — Cloudflare Worker
+name = "mcpsip"
+main = "mcpsip_worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+SIP_BACKEND = ""
+SIP_PORT = "15060"
+SIP_REALM = "goip-server"
+
+# Custom domain
+routes = [
+  { pattern = "mcpsip.sgoip.com", custom_domain = true }
+]
+
+# Durable Object for state
+[[durable_objects.bindings]]
+name = "MCP_STATE"
+class_name = "McpState"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["McpState"]
